@@ -12,38 +12,33 @@ using namespace std;
  *  
  */
 
-void Imprimir(int[], int n);
-void Shell(int[], int n);
+void print(int[], int n);
+void shell(int[], int n);
 
 int main()
 {
     int total;
-    cout << "Cunatos numeros tiene el arreglo" << endl;
+    cout << "Enter total elements: " << endl;
     cin >> total;
     int num[total];
     for (int i = 0; i < total; i++)
     {
-
-        cout << "Ingrese el numero para la posicion [ " << (i + 1) << " ] del arreglo" << endl;
+        cout << "Enter the element [ " << (i + 1) << " ] :" << endl;
         cin >> num[i];
     }
-
-    Shell(num, total);
+    shell(num, total);
 }
 
-void Shell(int a[], int n)
+void shell(int a[], int n)
 {
 
     int ints, i, aux;
     bool band;
-
     ints = n;
-
     while (ints > 1)
     {
         ints = (ints / 2);
         band = true;
-
         while (band == true)
         {
             band = false;
@@ -57,17 +52,16 @@ void Shell(int a[], int n)
                     a[i + ints] = aux;
                     band = true;
                 }
-
                 i++;
-                Imprimir(a, n);
+                print(a, n);
             }
         }
     }
 }
 
-void Imprimir(int a[], int n)
+void print(int a[], int n)
 {
-    cout << "Numeros del arreglo ordenandos de Menor a Mayor" << endl;
+    cout << "Ordered elements: " << endl;
 
     for (int i = 0; i < n; i++)
         cout << "[ " << a[i] << " ]";

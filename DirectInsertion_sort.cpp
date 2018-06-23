@@ -10,15 +10,15 @@
  */
 
 using namespace std;
-void Imprimir(int a[], int n)
+void print(int a[], int n)
 {
-    cout << "Numeros Ordenados de Menor a Mayor" << endl;
+    cout << "Ordered elements: " << endl;
 
     for (int i = 0; i < n; i++)
         cout << "[ " << a[i] << " ]";
 }
 
-void Insercion_Directa(int a[], int n)
+void directInsertion(int a[], int n)
 {
     int i, k, aux;
 
@@ -38,18 +38,17 @@ void Insercion_Directa(int a[], int n)
 
 int main()
 {
-
     int n;
-    cout << "Numero de elementos del arreglo" << endl;
+    cout << "Enter total elements: " << endl;
     cin >> n;
     int num[n];
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el numero " << (i + 1) << endl;
+        cout << "Enter the element:  " << (i + 1) << endl;
         cin >> num[i];
     }
-    Insercion_Directa(num, n);
-    Imprimir(num, n);
+    directInsertion(num, n);
+    print(num, n);
 
     return 0;
 }

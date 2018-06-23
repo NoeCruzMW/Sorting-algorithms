@@ -13,7 +13,7 @@ using namespace std;
  *  
  */
 
-void Radix(int[], int);
+void radix(int[], int);
 void print(int[], int);
 
 vector<vector<int>> Vec;
@@ -21,23 +21,22 @@ vector<vector<int>> Vec;
 int main()
 {
 
-    int NumeroDeElemtos;
-    cin >> NumeroDeElemtos;
-    int Numeros[NumeroDeElemtos];
-    for (int i = 0; i < NumeroDeElemtos; i++)
+    int totalElements;
+    cin >> totalElements;
+    int elements[totalElements];
+    for (int i = 0; i < totalElements; i++)
     {
 
-        cin >> Numeros[i];
+        cin >> elements[i];
     }
 
-    Radix(Numeros, NumeroDeElemtos);
+    radix(elements, totalElements);
 }
 
-void Radix(int a[], int n)
+void radix(int a[], int n)
 {
     Vec.resize(10);
     int temp, m = 0;
-
     for (int i = 0; i < 7; i++)
     {
         for (int j = 0; j < n; j++)
@@ -45,7 +44,6 @@ void Radix(int a[], int n)
             temp = (int)(a[j] / pow(10, i)) % 10;
             Vec[temp].push_back(a[j]);
         }
-
         for (int k = 0; k < 10; k++)
         {
             for (int l = 0; l < Vec[k].size(); l++)
@@ -55,16 +53,14 @@ void Radix(int a[], int n)
             }
             Vec[k].clear();
         }
-
         m = 0;
     }
-
     print(a, n);
 }
 
 void print(int a[], int tam)
 {
-    cout << "\t\tArreglo de Numeros Ordenados.\n\n";
+    cout << "\t\tOrdered elements: \n\n";
     for (int i = 0; i < tam; i++)
         cout << "\t[" << a[i] << "] ";
 }

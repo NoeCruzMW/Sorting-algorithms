@@ -6,9 +6,8 @@ using namespace std;
  *  Code by Noé Cruz | Zurck'z | niko
  *  Email: contactozurckz@gmail.com
  *  Facebook: https://www.facebook.com/zurckzte
- *  YouTube: 
- *  Twitter:
- *  Linkim:
+ *  YouTube: https://www.youtube.com/user/noezurckz
+ *  Twitter: https://twitter.com/Zurckz
  *  
  */
 

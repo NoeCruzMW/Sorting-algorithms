@@ -1,5 +1,6 @@
 #include <iostream>
 #define MAX 1000
+
 /*
  *  Code by Noé Cruz | Zurck'z | niko
  *  Email: contactozurckz@gmail.com
@@ -10,27 +11,25 @@
  */
 using namespace std;
 
-void QuickSort(int[], int);
-void Imprimir(int[], int);
+void quickSort(int[], int);
+void print(int[], int);
 
 int main()
 {
     int n;
-    cout << "Ingrese el total de numeros" << endl;
+    cout << "Enter total elements:" << endl;
     cin >> n;
     int a[n];
     for (int i = 0; i < n; i++)
     {
-
-        cout << "Ingresa el elemento numero " << i + 1 << " : " << endl;
+        cout << "Enter the element: " << i + 1 << " : " << endl;
         cin >> a[i];
     }
-
-    QuickSort(a, n);
-    Imprimir(a, n);
+    quickSort(a, n);
+    print(a, n);
 }
 
-void QuickSort(int a[], int n)
+void quickSort(int a[], int n)
 {
     int tope, ini, fin, pos;
     int may[MAX], menor[MAX];
@@ -96,14 +95,11 @@ void QuickSort(int a[], int n)
     }
 }
 
-void Imprimir(int a[], int n)
+void print(int a[], int n)
 {
-
-    cout << "Elementos Ordenados" << endl;
-
+    cout << "Ordered elements:" << endl;
     for (int i = 0; i < n; i++)
     {
-
         cout << "[" << a[i] << "]";
     }
 }
